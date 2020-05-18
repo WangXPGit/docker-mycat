@@ -8,7 +8,7 @@ ENV MYCAT_PKG Mycat-server-1.6-RELEASE-20161028204710-linux.tar.gz
 WORKDIR /usr/local
 
 # 缓存层
-RUN wget http://dl.mycat.io/$MYCAT_VERSION/$MYCAT_PKG
+RUN wget https://github.com/MyCATApache/Mycat-download/blob/master/$MYCAT_VERSION/$MYCAT_PKG
 RUN apt-get update && \
     apt-get install -y procps && \
     apt-get clean && \
